@@ -22,6 +22,11 @@ const questions = [
   name: "installation",
  },
  {
+  type: "input",
+  message: "Provide instructions and examples for use.",
+  name: "usage",
+ },
+ {
   type: "list",
   message: "What license would you like to use for your project?",
   name: "license",
@@ -29,24 +34,36 @@ const questions = [
  },
  {
   type: "input",
-  message: "",
-  name: "Contributing",
+  message:
+   "List how others have or can contribute to your project, if any, with links to their GitHub profiles.",
+  name: "contributing",
  },
  {
   type: "input",
-  message: "",
-  name: "Tests",
+  message:
+   "Write tests for your application if made. Then provide examples on how to run them here.",
+  name: "tests",
  },
  {
   type: "input",
-  message: "What license would you like to use for your project?",
-  name: "Questions",
+  message: "Provide GitHub username, otherwise leave blank.",
+  name: "githubUsername",
+ },
+ {
+  type: "input",
+  message: "Provide an email address, otherwise leave blank.",
+  name: "email",
+ },
+ {
+  type: "input",
+  message: "If any questions or concerns, state them here.",
+  name: "questions",
  },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
- fs.writeFileSync();
+function writeToFile(fileName, userAnswers) {
+ fs.writeFileSync(fileName, userAnswers);
 }
 
 // TODO: Create a function to initialize app
